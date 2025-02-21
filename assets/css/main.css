@@ -663,39 +663,33 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skills-content {
+  display: flex;
+  justify-content: center; /* Centers the items horizontally */
+  gap: 40px; /* Adds space between items */
+  flex-wrap: wrap; /* Ensures responsiveness */
 }
 
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
+.skills-content .progress {
+  height: auto;
+  width: 100px;
+  flex-wrap: wrap;
+  flex-direction: column; 
+  align-items: center; /* Center align items */
+  text-align: center; /* Ensures text is centered */
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skills-content .progress img {
+  width: 90px; /* Adjust image size */
+  height: 100px;
+  padding: 10px;
 }
 
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
+.skills-content .progress .skill {
+  margin-top: 5px; /* Adds space between image and text */
+  font-weight: bold;
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-}
 
 /*--------------------------------------------------------------
 # Resume Section
